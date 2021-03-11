@@ -15,7 +15,6 @@ class CascadeUCB():
         self.A = np.zeros((number_of_rounds, K), dtype=np.int32)
         self.C = np.zeros(number_of_rounds)
         self.regrets = np.zeros(number_of_rounds)
-        return
 
     def initialize(self, dataset, weights):
         self.T[0, :] = 1
@@ -64,11 +63,11 @@ class CascadeUCB():
         reward = dataset[t][self.A[t]]
         # compute regret
         immediate_regret = self.best_f-self.f(t)
-        self.regrets[t] = self.regrets[t-1] + np.abs(immediate_regret)
+        # self.regrets[t] = self.regrets[t-1] + np.abs(immediate_regret)
+        self.regrets[t] = np.abs(immediate_regret)
         # get index of  attractive item
         if np.sum(reward) > 0:
             self.C[t] = np.argmax(reward == 1)
         else:
             self.C[t] = 1e6
         self.update_weights(t)
-        return True
