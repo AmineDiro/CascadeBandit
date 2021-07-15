@@ -39,13 +39,13 @@ clearly see a convergence as the cumulative regret stabilizes.
     
 ![png](CascadeBandit-UCB_files/CascadeBandit-UCB_6_0.png)
     
-Plotting the selected item e by rounds on a logarithmic scale on the y-axis in figure 2, we clearly see that
-the algorithms stops selecting sub-optimal items (items from 2 to 8).
+
 
 
 ## Cumulative item selections
 
-
+Plotting the selected item e by rounds on a logarithmic scale on the y-axis in figure 2, we clearly see that
+the algorithms stops selecting sub-optimal items (items from 2 to 8).
     
 ![png](CascadeBandit-UCB_files/CascadeBandit-UCB_8_0.png)
     
